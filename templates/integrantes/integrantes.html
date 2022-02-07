@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block extrahead %}
+<title>Integrantes de la conferencia</title>
+{% endblock extrahead %}
+
+{% block content %}
+
+<section class="p-5 m-5">
+        <div class="container text-center bg-light p-0" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+        <h1 class="fs-3 p-3 border m-0">Nuestros estudiantes</h1>
+
+            <table class="table bg-white">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nombres</th>
+      <th scope="col">Apellidos</th>
+      <th scope="col">Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% if personas %}
+    {% for persona in personas %}
+    <tr>
+      <th scope="row">{{persona.id}}</th>
+      <td>{{persona.nombres}}</td>
+      <td>{{persona.apellidos}}</td>
+      <td>{{persona.email}}</td>
+    </tr>
+    {% endfor %}
+    {% endif %}
+  </tbody>
+</table>
+</div>
+</section>
+
+{% endblock content %}

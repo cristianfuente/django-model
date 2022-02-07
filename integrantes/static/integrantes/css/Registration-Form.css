@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.sect-form{
+    height: 100vh;
+    background: #EEEEEE;
+    font-family: 'Roboto', sans-serif;
+}
+
+.sect-form .container{
+    border-radius: 25px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.banner{
+    width: 100%;
+    height: 150px;
+    background-color: aqua;
+    background-image: url(../img/vector-triangle-background-215.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#btn-registro{
+    background-color: #3C8DAD;
+    overflow: hidden;
+    position: relative;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 1.2em;
+    letter-spacing: 2px;
+    transition: .5s all ease;
+    z-index: 0;
+    border: none;
+}
+
+
+input{
+    text-align: center;
+}
+
+#btn-registro:hover{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+#btn-registro::after{
+    content: "";
+    position: absolute;
+    top: 150%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 100%;
+    height: 100%;
+    background-color: #004265;
+    z-index: -1;
+    transition: .5s all ease;
+}
+
+#btn-registro:hover::after{
+    top: 50%;
+}

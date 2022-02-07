@@ -1,1 +1,1 @@
-django-model
+Django project exmaple for apply shadow daemon practical guide

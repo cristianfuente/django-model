@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+
+{% block extrahead %}
+<title>Aprende sin limites</title>
+{% endblock extrahead %}
+{% block extracss %}
+{% load static %}<link rel="stylesheet" href="{% static 'integrantes/css/Footer-Basic.css' %}">
+{% load static %}<link rel="stylesheet" href="{% static 'integrantes/css/Highlight-Phone.css' %}">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
+{% endblock extracss %}
+
+{% block content %}
+{% load static %}
+   <header class="text-center text-white masthead" style="background:url({% static 'integrantes/img/bg-masthead.jpg' %})no-repeat center center;background-size:cover;">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-9 mx-auto position-relative">
+                <h1 class="mb-5">Incribete a las mejores conferencias de programacion para aprender sin limites</h1>
+            </div>
+            <div class="col-md-10 col-lg-8 col-xl-7 mx-auto position-relative">
+                <form action="">
+                    <div class="row">
+                        <div class="col-12 col-md-9 mb-2 mb-md-0"><input class="form-control form-control-lg" type="email" placeholder="Inscribete"></div>
+                        <div class="col-12 col-md-3"><a class="btn btn-primary btn-lg" href="{% url 'registro' %}">Registrarme</a></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</header>
+<section class="highlight-phone">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="intro">
+                    <h2>Conoce todos nuestros estudiantes incritos</h2>
+                    <p>Conoce la lista de los estudiantes inscrito que se han propuesto a cambiar su futuro, que esperas se parte de nuestro equipo ahora!</p><a class="btn btn-primary" role="button" href="{% url 'integrantes' %}">Integrantes</a>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                {% load static %}<div class="d-none d-md-block phone-mockup"><img class="device" src="{% static 'integrantes/img/phone.svg' %}">
+                    <div class="screen"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="showcase">
+    <div class="container-fluid p-0">
+        <div class="row g-0">
+            {% load static %}<div class="col-lg-6 text-white order-lg-2 showcase-img" style="background-image:url({% static 'integrantes/img/bg-showcase-1.jpg' %});"><span></span></div>
+            <div class="col-lg-6 my-auto order-lg-1 showcase-text">
+                <h2>Todo sobre informatica</h2>
+                <p class="lead mb-0">Todo lo ultimo en tecnologia e informatica en un solo lugar, cambia tus oportunidades ahora mismo</p>
+            </div>
+        </div>
+        <div class="row g-0">
+            {% load static %}<div class="col-lg-6 text-white showcase-img" style="background-image:url({% static 'integrantes/img/bg-showcase-2.jpg' %});"><span></span></div>
+            <div class="col-lg-6 my-auto order-lg-1 showcase-text">
+                <h2>Progranacion desde cero</h2>
+                <p class="lead mb-0">No necesitas saber nada solo tener ganas de aprender y motivaciones en la vida</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+<section class="text-center bg-light testimonials">
+    <div class="container">
+        <h2 class="mb-5">Nuestros Expertos</h2>
+        <div class="row">
+            <div class="col-lg-4">
+                {% load static %}<div class="mx-auto testimonial-item mb-5 mb-lg-0"><img class="rounded-circle img-fluid mb-3" src="{% static 'integrantes/img/testimonials-1.jpg' %}">
+                    <h5>Maria ayujilbar</h5>
+                    <p class="font-weight-light mb-0">Doctorado en ciencias de la computacion</p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                {% load static %}<div class="mx-auto testimonial-item mb-5 mb-lg-0"><img class="rounded-circle img-fluid mb-3" src="{% static 'integrantes/img/testimonials-2.jpg' %}">
+                    <h5>Fred S.</h5>
+                    <p class="font-weight-light mb-0">Hacker del pentagono</p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                {% load static %}<div class="mx-auto testimonial-item mb-5 mb-lg-0"><img class="rounded-circle img-fluid mb-3" src="{% static 'integrantes/img/testimonials-3.jpg' %}">
+                    <h5>Sarah W.</h5>
+                    <p class="font-weight-light mb-0">Trabajadora de seguridad informatica en la nasa</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="footer-basic">
+    <div class="social"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-facebook"></i></a></div>
+
+    <p class="copyright">ConocimientoSinLimites © 2021</p>
+</footer>
+{% endblock content %}

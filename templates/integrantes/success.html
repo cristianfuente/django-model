@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block extrahead %}
+<title>Registro Exitoso</title>
+{% endblock extrahead %}
+{% block extracss %}
+{% load static %}<link rel="stylesheet" href="{% static 'integrantes/css/success.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css">
+{% endblock extracss %}
+
+{% block content %}
+
+<section>
+
+        <div class="row success-div p-5 m-4 d-flex justify-content-center">
+            <h1>¡Genial! ahora eres parte del equipo!</h1>
+            <p class="col-7">Muchas Gracias por inscribirte a las mejores conferencias de programacion, en los proximos
+            dias recibiras en tu correo los horarios y la plataforma para el acceso.
+            </p>
+        </div>
+
+        <section class="text-center bg-light features-icons">
+        <h1>Pasos a Seguir</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="mx-auto features-icons-item mb-5 mb-lg-0 mb-lg-3">
+                        <div class="d-flex features-icons-icon"><i class="icon-call-in m-auto text-primary" data-bss-hover-animate="pulse"></i></div>
+                        <h3>Te contactamos</h3>
+                        <p class="lead mb-0">Espera nuestra llamada y el correo electronico, con los detalles del evento</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="mx-auto features-icons-item mb-5 mb-lg-0 mb-lg-3">
+                        <div class="d-flex features-icons-icon"><i class="icon-clock m-auto text-primary" data-bss-hover-animate="pulse"></i></div>
+                        <h3>Se puntual</h3>
+                        <p class="lead mb-0">Conectate diez minutos antes para poder hacer el registro e ingresas sin problemas</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="mx-auto features-icons-item mb-5 mb-lg-0 mb-lg-3">
+                        <div class="d-flex features-icons-icon"><i class="icon-emotsmile m-auto text-primary" data-bss-hover-animate="pulse"></i></div>
+                        <h3>Disfruta</h3>
+                        <p class="lead mb-0">Disfruta de las mejores conferencias de tecnologia sin ningun costo</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    </section>
+
+{% endblock content %}
